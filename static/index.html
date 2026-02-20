@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematiq | AI Video Shot List Generator</title>
+    <meta name="description" content="Professional cinematic shot list generator powered by AI.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <h1 class="logo">Cinemati<span class="accent">q</span></h1>
+            <p class="subtitle">Elevate your travel vlogs with AI-powered shot planning</p>
+        </header>
+
+        <section class="generator-section">
+            <div class="glass-card">
+                <div class="input-group">
+                    <input type="text" id="location-input" placeholder="Enter a location (e.g., Tokyo, Japan)" autocomplete="off">
+                    <button id="generate-btn">
+                        <span class="btn-text">Generate Shot List</span>
+                        <div class="spinner" id="btn-spinner"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="result-section" id="result-container" style="display: none;">
+            <div class="glass-card result-card">
+                <div class="result-header">
+                    <h2>🎬 <span id="display-location"></span> Shot List</h2>
+                    <button id="copy-btn" title="Copy to clipboard">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4V2h10l4 4v10h-2M4 8h10v10H4z"></path></svg>
+                    </button>
+                </div>
+                <div id="shot-list-content" class="markdown-body"></div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Cinematiq AI Core. Professional Grade AI Planning.</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
